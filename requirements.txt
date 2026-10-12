@@ -1,0 +1,72 @@
+# auto-train-ticket-booking-system
+
+Automated Train Ticket Booking System using Selenium, Tkinter/CustomTkinter, and Multi-threading.
+
+This project is a desktop application that helps a user log in to the IRCTC website, search for trains, and review available options from a GUI. It is built as a user-assisted automation helper rather than a fully autonomous booking bot, so that final ticket booking decisions always stay under user control.
+
+## Features
+
+- GUI built with CustomTkinter
+- Selenium-based browser automation
+- Multi-threaded background work so the UI remains responsive
+- Login flow with user credentials
+- Train search by source, destination, date, and class
+- Results display in the GUI
+- Manual confirmation step before final booking actions
+- Safe error logging and browser cleanup
+
+## Tech Stack
+
+- Python 3.10+
+- Selenium
+- CustomTkinter
+- Threading / Queue
+
+## Installation
+
+1. Clone the repository.
+2. Create a virtual environment.
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Run the app
+
+```bash
+python main.py
+```
+
+## Important notes
+
+- IRCTC UI and selectors may change over time. You may need to update the selectors in `app/automation.py` if the website structure changes.
+- Some login steps, including OTP or CAPTCHA screens, may require manual interaction.
+- This project is intended for educational and user-assisted automation. Please follow the website's terms and policies.
+
+## Project structure
+
+```text
+.
+├── app/
+│   ├── __init__.py
+│   ├── automation.py
+│   ├── config.py
+│   └── gui.py
+├── main.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+## Notes for extension
+
+You can extend this project with:
+
+- a booking assistant flow for a selected train
+- fare and availability parsing
+- seat preference logic
+- database-backed history of searches
+- dark/light theme settings
+- logs saved to files
+
